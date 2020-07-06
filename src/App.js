@@ -8,6 +8,7 @@ import AllBeers from './AllBeers';
 import Header from './Header';
 import EachBeer from './EachBeer';
 import RandomBeer from './RandomBeer';
+import Newbeer from './components/newbeer';
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/all-beers" render={() => <AllBeers />} />
           <Route exact path="/random-beers" render={() => <RandomBeer />} />
-          <Route exact path="/new-beer" />
+          <Route exact path="/new-beer" render ={() => <Newbeer/>} />
           <Route
             exact
             path="/beers/:id"
