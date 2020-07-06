@@ -4,12 +4,15 @@ import './App.css';
 import axios from 'axios'
 import {Switch, Route} from 'react-router-dom'
 import Home from './Home'
+import Header from './components/header'
 import AllBeers from './AllBeers'
 
 class App extends Component {
   render(){
   return (
     <div>
+  
+    <Header/>
     
     <Switch>
 
