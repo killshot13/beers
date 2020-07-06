@@ -14,6 +14,16 @@ class AllBeers extends Component {
     });
   }
 
+  searchBeers = async (event) => 
+  {
+    console.log("searchBeers")
+    console.log(event.target.value)
+    let res = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${event.target.value}`)
+    this.setState({
+      beers:res.data
+    })
+  }
+
   displayBeers = () => {
     return this.state.beers.map((eachBeer) => {
       return (
@@ -28,7 +38,10 @@ class AllBeers extends Component {
   };
 
   render() {
-    return <div>{this.displayBeers()}</div>;
+    return <div>
+    <input onChange = {this.searchBeers} placeholder = "Search"></input>
+    {this.displayBeers()}
+    </div>;
   }
 }
 
