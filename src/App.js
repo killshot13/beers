@@ -7,6 +7,7 @@ import Home from './Home';
 import AllBeers from './AllBeers';
 import Header from './Header';
 import EachBeer from './EachBeer';
+import RandomBeer from './RandomBeer';
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/all-beers" render={() => <AllBeers />} />
-          <Route exact path="/random-beers" />
+          <Route exact path="/random-beers" render={() => <RandomBeer />} />
           <Route exact path="/new-beer" />
           <Route
             exact
