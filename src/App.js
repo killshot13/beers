@@ -9,6 +9,7 @@ import Header from './Header';
 import EachBeer from './EachBeer';
 import RandomBeer from './RandomBeer';
 import Newbeer from './components/newbeer';
+import NewBeer from './NewBeer';
 
 class App extends Component {
   render() {
